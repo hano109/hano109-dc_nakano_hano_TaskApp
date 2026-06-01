@@ -1,0 +1,515 @@
+/* ========================================
+   リセット・共通設定
+======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Yu Gothic", "Hiragino Sans", "Meiryo", sans-serif;
+    line-height: 1.7;
+    color: #333;
+    background: #f5f7fb;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ========================================
+   レイアウト
+======================================== */
+.container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+}
+
+/* ========================================
+   ヘッダー
+======================================== */
+.header {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.app-title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.nav {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.nav a {
+    color: #fff;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+/* ========================================
+   メイン
+======================================== */
+main.container {
+    padding: 40px 0 70px;
+}
+
+/* ========================================
+   ヒーロー
+======================================== */
+.hero {
+    background: #fff;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin-bottom: 32px;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: #1e293b;
+    margin-bottom: 16px;
+}
+
+.hero p {
+    color: #555;
+    margin-bottom: 24px;
+}
+
+.button-group {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+/* ========================================
+   ボタン
+======================================== */
+.btn {
+    display: inline-block;
+    background: #2563eb;
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: 0.3s;
+    box-shadow: 0 6px 14px rgba(37, 99, 235, 0.22);
+}
+
+.btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: #e2e8f0;
+    color: #1e293b;
+    box-shadow: none;
+}
+
+.btn-secondary:hover {
+    background: #cbd5e1;
+}
+
+/* ========================================
+   セクション共通
+======================================== */
+.section-title {
+    font-size: 1.7rem;
+    color: #1e293b;
+    margin-bottom: 18px;
+}
+
+/* ========================================
+   メッセージ
+======================================== */
+.message {
+    margin-bottom: 24px;
+    padding: 16px 18px;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+.error-message {
+    background: #fee2e2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+}
+
+/* ========================================
+   カード共通
+======================================== */
+.card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+/* ========================================
+   タスク概要
+======================================== */
+.summary {
+    margin-bottom: 36px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.summary-card {
+    text-align: center;
+}
+
+.summary-card h3 {
+    font-size: 1rem;
+    color: #64748b;
+    margin-bottom: 14px;
+}
+
+.count {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #2563eb;
+}
+
+/* ========================================
+   本日のタスク
+======================================== */
+.today-task-section {
+    margin-bottom: 40px;
+}
+
+.task-list {
+    display: grid;
+    gap: 20px;
+}
+
+.task-item {
+    border-left: 6px solid #2563eb;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.task-title {
+    font-size: 1.2rem;
+    color: #1e293b;
+}
+
+.task-progress {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #2563eb;
+    background: #dbeafe;
+    padding: 6px 12px;
+    border-radius: 999px;
+}
+
+.task-memo {
+    color: #475569;
+    margin-bottom: 16px;
+}
+
+/* ========================================
+   進捗バー
+======================================== */
+.progress-bar {
+    width: 100%;
+    height: 14px;
+    background: #e2e8f0;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #22c55e, #16a34a);
+    border-radius: 999px;
+    transition: width 0.3s ease;
+}
+
+/* ========================================
+   レスポンシブ
+======================================== */
+@media (max-width: 900px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 28px;
+    }
+
+    .hero h2 {
+        font-size: 1.6rem;
+    }
+
+    .app-title {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 16px 0;
+    }
+
+    .header-inner {
+        align-items: flex-start;
+    }
+
+    .nav {
+        gap: 10px;
+    }
+
+    .nav a {
+        padding: 6px 10px;
+        font-size: 0.95rem;
+    }
+
+    .hero {
+        padding: 22px 18px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .count {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+    }
+
+    .task-title {
+        font-size: 1.05rem;
+    }
+}
+/* ========================================
+   成功メッセージ
+======================================== */
+.success-message {
+    background: #dcfce7;
+    color: #166534;
+    border: 1px solid #86efac;
+}
+
+/* ========================================
+   一覧ページ追加スタイル
+======================================== */
+.card-grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.section-header {
+    margin-bottom: 18px;
+}
+
+.no-margin {
+    margin-bottom: 0;
+}
+
+.meta-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.badge-gray {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.badge-blue {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.badge-green {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.progress-margin {
+    margin-bottom: 18px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.info-box {
+    background: #f8fafc;
+    padding: 14px;
+    border-radius: 12px;
+}
+
+.info-box strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #1e293b;
+}
+
+.action-section {
+    margin-bottom: 18px;
+}
+
+.action-section h4 {
+    margin-bottom: 10px;
+    color: #1e293b;
+}
+
+.action-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.inline-form {
+    margin: 0;
+}
+
+.mini-btn {
+    min-width: 88px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+.mini-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.danger-btn {
+    background: #ef4444;
+    color: #fff;
+    box-shadow: 0 6px 14px rgba(239, 68, 68, 0.22);
+}
+
+.danger-btn:hover {
+    background: #dc2626;
+}
+
+.details-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 16px 18px;
+}
+
+.details-summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.details-content {
+    margin-top: 16px;
+    display: grid;
+    gap: 18px;
+}
+
+.details-title {
+    margin-bottom: 8px;
+    color: #1e293b;
+}
+
+.details-text {
+    color: #475569;
+}
+
+.memo-list {
+    display: grid;
+    gap: 10px;
+}
+
+.memo-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 12px 14px;
+}
+
+.memo-step {
+    min-width: 58px;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 4px 10px;
+    border-radius: 999px;
+    text-align: center;
+}
+
+.memo-text {
+    color: #334155;
+}
+
+@media (max-width: 900px) {
+    .card-grid-4 {
+        grid-template-columns: 1fr;
+    }
+}
